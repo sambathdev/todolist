@@ -1,0 +1,20 @@
+.todo-form-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.todo-form-container input {
+  width: 100%;
+  border: 1px black solid;
+  padding: 5px;
+}
+.todo-form-container button {
+  padding: 10px;
+  background-color: rgb(3, 129, 247);
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+.todo-form-container button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,64 @@
+.todo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 10px;
+  
+}
+
+.todo img {
+  width: 15px;
+  
+}
+
+.todo .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+.todo .left .complete {
+  text-decoration: line-through;
+}
+
+.todo .right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  visibility: hidden;
+  transition: .5s;
+  opacity: 0;
+}
+.todo:hover .right{
+  visibility: visible;
+  opacity: 1;
+}
+.todo::after {
+  content: '';
+  width: 0px;
+  position: absolute;
+  display: block;
+  height: 3px;
+  background: red;
+  bottom: 0;
+  transition: .2s;
+}
+.todo:hover::after{
+  width: 100% !important;
+}
+
+.todo .right button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  white-space: nowrap;
+}
+.remove-button:hover {
+  background: rgb(247, 202, 3);
+}
+.edit-button:hover {
+  background: rgb(3, 129, 247);
+}
